@@ -41,8 +41,8 @@ export default class Usuarios extends Component {
     this.loadUsuarios(pageNumber)
 }
 
-
    render(){
+       // eslint-disable-next-line
        const { usuarios, usuariosInfo, page } = this.state
 
        return (
@@ -52,6 +52,7 @@ export default class Usuarios extends Component {
                     <article key={usuario._id}>
 
                         <strong>{usuario.nome}</strong>
+                        
                         <p>{usuario.matricula}</p>
                         <p><Link to={`/usuarios/${usuario._id}`}>Acessar</Link></p>
                     </article>
